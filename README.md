@@ -91,7 +91,7 @@ For the complete game list with screenshots and instructions, please visit:
 
 ## Why Pure Python?
 
-Every game in this collection is written entirely in Python without using game engines like Pygame, Unity, or Godot. This demonstrates what's possible with standard Python libraries and serves as a testament to the language's versatility.
+Every game in this collection is written entirely in Python without using game engines like Unity, or Godot. This demonstrates what's possible with standard Python libraries and serves as a testament to the language's versatility.
 
 ---
 
