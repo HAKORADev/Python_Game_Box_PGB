@@ -41,7 +41,7 @@ Python Game Box (PGB) is a nostalgic tribute to the golden age of Flash games. I
 
 ## Downloads
 
-### Direct Download Links
+### Direct Download Links(old)
 
 | Version | Download | Description |
 |---------|----------|-------------|
@@ -50,22 +50,20 @@ Python Game Box (PGB) is a nostalgic tribute to the golden age of Flash games. I
 | **v1.0** | [📥 Download Python_Game_Box.exe](https://www.mediafire.com/file/8gdnugakadw978c/Python_Game_Box.exe/file) | Initial release |
 
 ### Official Release
-**[🎮 Download from itch.io](https://hakoradev.itch.io/python-game-box-pgb-flash-revival)** - Best experience with all games and documentation
+**[🎮 Download from itch.io](https://hakoradev.itch.io/python-game-box-pgb-flash-revival)** - Best experience with 11 games and documentation
 
-> **Note**: These are pre-compiled Windows executables. The source code is not publicly available.
+> **Note**: These are pre-compiled Windows executables. The source code can run on linux.
 
 ---
 
 ## ⚠️ Important Notice
 
 ### Source Code
-The **source code is not available** for this project. However, if you're interested in similar projects or want something custom-built, we can create:
+The **source code is Here** for this project. However, if you want latest and weirdest experience, you can run directly from source, there is:
 - New games in Python
 - Custom game collections
 - Similar nostalgic tributes
-- Educational programming examples
 
-**Contact us for custom development requests!**
 
 ---
 
@@ -119,4 +117,4 @@ This software is provided for personal, non-commercial use. See the included LIC
 
 ---
 
-*This repository is maintained for archival purposes. For the best experience, always download from the official itch.io release.*
+*This repository is maintained for continues development purposes. For the original experience, always download from the official itch.io release.*
