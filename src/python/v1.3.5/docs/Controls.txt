@@ -1,0 +1,179 @@
+---
+
+### **2048**
+#### *Single Player Mode*:
+- **Mouse**: Click on arrow buttons (↑↓←→) to move tiles
+
+#### *VS Mode*:
+- **Player 1**: **W, A, S, D** - Move tiles
+- **Player 2**: **Arrow Keys** - Move tiles
+
+---
+
+### **Dario**
+#### *Single Player Mode*:
+- **Left & Right Arrows**: Movement
+- **Space**: Jump
+
+#### *Two Players Mode*:
+- **Player 1**: **A, D** - Movement | **W** - Jump
+- **Player 2**: **Left & Right Arrows** - Movement | **Space** - Jump
+
+#### *When Lose*:
+- **R**: Restart
+- **ESC**: Exit
+
+---
+
+### **Keyboard Singer**
+#### *Free Play Mode*:
+- **0-9**: Different melody banks (Piano, Electric Guitar, BeatBox, Organ, Flute, Violin, Trumpet, Bass, Synth, Xylophone)
+- **A-Z**: Play notes and build sequence
+- **LCTRL**: Decrease melody weight
+- **LSHIFT**: Increase melody weight
+- **RCTRL**: Increase melody delay
+- **RSHIFT**: Decrease melody delay
+- **LALT**: Decrease melody length
+- **RALT**: Increase melody length
+- **TAB**: Generate random melody sequence
+- **Enter**: Play the built sequence
+- **Space**: Toggle Autoplay on/off
+- **Backspace** (when Autoplay is On): Toggle Longoly mode (sustained notes)
+- **ESC**: Return to menu
+
+#### *Key Tapper Mode*:
+- **A-Z**: Type letters to match the word
+- **Backspace**: Delete last character
+- **Enter**: Submit answer
+
+---
+
+### **Snake**
+#### *Single Player Mode*:
+- **Arrows**: Movement
+
+#### *Two Players Mode*:
+- **Player 1**: **Arrows** - Movement
+- **Player 2**: **W, A, S, D** - Movement
+
+#### *VS AI Mode*:
+- **Player**: **Arrows** - Movement
+- Select AI difficulty: **1** (Easy), **2** (Medium), **3** (Hard)
+
+---
+
+### **XO (Tic Tac Toe)**
+- **Mouse**: Click on cells to place X or O
+- **Sound Toggle**: Click speaker icon (top-right)
+- **Home Button**: Click to return to menu
+
+#### *VS CPU Mode*:
+- Select difficulty: **Easy**, **Medium**, **Hard**, **Overkill**
+
+---
+
+### **Snowy Tower**
+#### *Single Player Mode*:
+- **Left & Right Arrows**: Movement
+
+#### *VS Player Mode*:
+- **Player 1**: **Left & Right Arrows** - Movement
+- **Player 2**: **A, D** - Movement
+
+#### *VS AI Mode*:
+- **Player**: **Left & Right Arrows** - Movement
+- Select AI difficulty: **Easy**, **Medium**, **Hard**
+
+#### *When Lose*:
+- **R**: Restart
+- **ESC**: Exit
+
+---
+
+### **Hen Invaders**
+#### *Single Player Mode*:
+- **Left & Right Arrows**: Movement
+- **Space**: Shooting
+- **Enter**: Launch rockets
+
+#### *Two Players Mode*:
+- **Player 1**: **Left & Right Arrows** - Movement | **Space** - Shooting | **Enter** - Rockets
+- **Player 2**: **A, D** - Movement | **W** - Shooting | **E** - Rockets
+
+#### *Power-Ups*:
+- **C**: Activate AI Ship Power-up (helps kill hens for 3 waves)
+
+#### *When Lose*:
+- **R**: Restart
+- **ESC**: Exit
+
+---
+
+### **Geometry Flash**
+- **Space**: Switch lanes (change between top and bottom)
+- **F11**: Toggle fullscreen
+
+#### *When Lose*:
+- **R**: Restart
+- **ESC**: Exit
+
+---
+
+### **Escape The Maze**
+- **Arrows**: Movement
+- **Enter**: Activate Path-Finder Power-Up (shows path to exit)
+- **F11**: Toggle fullscreen
+
+#### *When Lose*:
+- **R**: Restart
+- **ESC**: Exit
+
+---
+
+### **Pong**
+#### *VS AI Mode*:
+- **W, S**: Movement (left paddle)
+- Select AI difficulty: **1** (Easy), **2** (Medium), **3** (Hard)
+- **ESC**: Return to menu
+
+#### *VS Player Mode*:
+- **Player 1**: **W, S** - Movement (left paddle)
+- **Player 2**: **Up, Down** - Movement (right paddle)
+- **ESC**: Return to menu
+
+---
+
+### **Matcher**
+- **Mouse**: Click and drag to swap adjacent gems
+- Match 3 or more gems of the same color
+- **Power-Ups**: Click on icons at bottom to activate:
+  - **Matcher**: Auto-swaps gems to create matches
+  - **Cleaner**: Clears a random row or column
+  - **Bomber**: Clears a 4x4 area
+  - **Vanisher**: Clears all gems of one color
+
+#### *Game Over*:
+- **R**: Restart
+- **ESC**: Exit
+
+---
+
+### **Fruit Slasher**
+- **Mouse**: Swipe/drag to slice fruits
+- Avoid slicing bombs!
+- Don't miss more than 3 fruits
+
+---
+
+### **Cosmic Spud**
+- **W, A, S, D** or **Arrow Keys**: Movement
+- **Mouse**: Aim direction
+- Auto-shoot enabled
+- Collect XP gems, coins, and health pickups
+- Level up to choose upgrades
+
+#### *Game Over*:
+- **R**: Restart
+- **ESC**: Exit
+
+---
