@@ -9,16 +9,15 @@ import pyganim
 pygame.init()
 pygame.mixer.init(frequency=44100, size=-16, channels=2)
 
-# Constants
 WIDTH, HEIGHT = 1280, 800
 FPS = 60
 GRAVITY = 1.0
 PLAYER_SPEED = 6
 JUMP_SPEED = -18
 MAX_FALL_SPEED = 15
-COYOTE_TIME = 0.15          # seconds
-JUMP_BUFFER = 0.1           # seconds
-RESPAWN_VERTICAL_OFFSET = 70  # pixels above last safe spot
+COYOTE_TIME = 0.15
+JUMP_BUFFER = 0.1
+RESPAWN_VERTICAL_OFFSET = 70
 
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Dario (Fixed)")
@@ -27,7 +26,6 @@ clock = pygame.time.Clock()
 start_time = time.time()
 final_time = None
 
-# ---------- Helper Functions ----------
 def create_gradient_surface(width, height, start_color, end_color):
     surf = pygame.Surface((width, height))
     for y in range(height):
@@ -59,6 +57,7 @@ def create_circle_surface(diameter, color):
     return surf
 
 def generate_sound(freq, duration, volume=0.5, sample_rate=44100):
+    """Generate a sound wave of given frequency and duration."""
     t = np.linspace(0, duration, int(sample_rate * duration), endpoint=False)
     wave = volume * np.sin(2 * np.pi * freq * t)
     arr = np.int16(wave * 32767)
@@ -71,7 +70,6 @@ stomp_sound = generate_sound(400, 0.15, volume=0.5)
 game_over_sound = generate_sound(200, 0.5, volume=0.5)
 powerup_sound = generate_sound(1000, 0.1, volume=0.5)
 
-# ---------- Sprite Classes ----------
 class Player(pygame.sprite.Sprite):
     def __init__(self, x, y, controls):
         super().__init__()
@@ -82,7 +80,6 @@ class Player(pygame.sprite.Sprite):
         self.image = self.anim.getCurrentFrame()
         self.rect = self.image.get_rect(topleft=(x, y))
 
-        # Movement
         self.vel_x = 0
         self.vel_y = 0
         self.on_ground = False
@@ -90,18 +87,15 @@ class Player(pygame.sprite.Sprite):
         self.jump_buffer_counter = 0.0
         self.controls = controls
 
-        # Stats
         self.lives = 3
         self.score = 0
         self.coin_count = 0
         self.kills = 0
         self.active = True
 
-        # Last safe ground position (for respawn)
         self.last_safe_x = x
         self.last_safe_y = y
 
-        # Power‑ups
         self.invincible = False
         self.invincible_timer = 0
         self.magnet = False
@@ -119,7 +113,6 @@ class Player(pygame.sprite.Sprite):
 
         now = pygame.time.get_ticks()
 
-        # ---- Power‑up timers ----
         if self.invincible and now > self.invincible_timer:
             self.invincible = False
         if self.magnet and now > self.magnet_timer:
@@ -131,7 +124,6 @@ class Player(pygame.sprite.Sprite):
         if self.gravity_reversed and now > self.gravity_timer:
             self.gravity_reversed = False
 
-        # ---- Input ----
         keys = pygame.key.get_pressed()
         speed_factor = 0.5 if self.slowmo else 1.0
         dx = 0
@@ -141,7 +133,6 @@ class Player(pygame.sprite.Sprite):
             dx += PLAYER_SPEED * speed_factor
         self.vel_x = dx
 
-        # Jump with buffer
         if keys[self.controls[2]]:
             self.jump_buffer_counter = JUMP_BUFFER
         else:
@@ -149,7 +140,6 @@ class Player(pygame.sprite.Sprite):
             if self.jump_buffer_counter < 0:
                 self.jump_buffer_counter = 0
 
-        # ---- Gravity ----
         gravity = -GRAVITY if self.gravity_reversed else GRAVITY
         self.vel_y += gravity * speed_factor
         if self.gravity_reversed:
@@ -159,16 +149,13 @@ class Player(pygame.sprite.Sprite):
             if self.vel_y > MAX_FALL_SPEED:
                 self.vel_y = MAX_FALL_SPEED
 
-        # ---- Horizontal movement ----
         self.rect.x += self.vel_x
         self._collide_horizontal(platforms)
 
-        # ---- Vertical movement ----
         self.rect.y += self.vel_y
         self.on_ground = False
         self._collide_vertical(platforms)
 
-        # ---- Coyote time ----
         if self.on_ground:
             self.coyote_counter = COYOTE_TIME
         else:
@@ -176,7 +163,6 @@ class Player(pygame.sprite.Sprite):
             if self.coyote_counter < 0:
                 self.coyote_counter = 0
 
-        # ---- Jump ----
         if self.jump_buffer_counter > 0:
             can_jump = (self.on_ground or self.coyote_counter > 0)
             if can_jump:
@@ -185,9 +171,7 @@ class Player(pygame.sprite.Sprite):
                 self.jump_buffer_counter = 0
                 self.coyote_counter = 0
 
-        # ---- Update last safe ground position ----
         if self.on_ground:
-            # Check if the platform we're standing on is not disappearing/invisible
             standing_on = None
             self.rect.y += 1
             hits = pygame.sprite.spritecollide(self, platforms, False)
@@ -201,7 +185,6 @@ class Player(pygame.sprite.Sprite):
                 self.last_safe_x = self.rect.centerx
                 self.last_safe_y = self.rect.centery
 
-        # Animation
         self.image = self.anim.getCurrentFrame()
 
     def _collide_horizontal(self, platforms):
@@ -209,9 +192,9 @@ class Player(pygame.sprite.Sprite):
             if hasattr(p, "visible") and not p.visible:
                 continue
             if self.rect.colliderect(p.rect):
-                if self.vel_x > 0:          # moving right
+                if self.vel_x > 0:
                     self.rect.right = p.rect.left
-                elif self.vel_x < 0:         # moving left
+                elif self.vel_x < 0:
                     self.rect.left = p.rect.right
                 self.vel_x = 0
 
@@ -220,20 +203,18 @@ class Player(pygame.sprite.Sprite):
             if hasattr(p, "visible") and not p.visible:
                 continue
             if self.rect.colliderect(p.rect):
-                if self.vel_y > 0:           # falling down
+                if self.vel_y > 0:
                     self.rect.bottom = p.rect.top
                     self.vel_y = 0
                     self.on_ground = True
-                    # Boost platform?
                     if isinstance(p, BoostPlatform):
                         self.vel_y = JUMP_SPEED * 1.5
                         jump_sound.play()
-                elif self.vel_y < 0:          # moving up
+                elif self.vel_y < 0:
                     self.rect.top = p.rect.bottom
                     self.vel_y = 0
 
     def carry_by_moving_platform(self, platforms):
-        """If standing on a moving platform, move with it."""
         self.rect.y += 1
         hits = pygame.sprite.spritecollide(self, platforms, False)
         self.rect.y -= 1
@@ -349,7 +330,6 @@ class RollingEnemy(pygame.sprite.Sprite):
         self.rect.x += self.speed
         self.angle = (self.angle + 10) % 360
         self.image = pygame.transform.rotate(self.base_image, self.angle)
-        # Keep collision box centered
         self.rect = self.image.get_rect(center=self.rect.center)
         if self.rect.x < self.start_x or self.rect.x > self.start_x + self.move_range:
             self.speed = -self.speed
@@ -403,7 +383,6 @@ class Particle(pygame.sprite.Sprite):
             alpha = int(255 * self.life / self.initial_life)
             self.image.set_alpha(alpha)
 
-# ---------- Sprite Groups ----------
 all_sprites = pygame.sprite.Group()
 platforms = pygame.sprite.Group()
 coins = pygame.sprite.Group()
@@ -420,14 +399,12 @@ game_over = False
 font = pygame.font.SysFont("Arial", 30)
 big_font = pygame.font.SysFont("Arial", 50)
 
-# ---------- Helper Functions for Game Logic ----------
 def create_base_platform():
     base = Platform(WIDTH // 2 - 300, HEIGHT - 150, 600, 20)
     platforms.add(base)
     all_sprites.add(base)
 
 def find_safe_respawn_point():
-    """Fallback respawn on the base platform."""
     return (WIDTH // 2, HEIGHT - 140)
 
 def show_menu():
@@ -579,7 +556,6 @@ def reset_game():
     spawn_x = max(p.rect.x for p in players) + 200
     start_time = time.time()
 
-# ---------- Main Game ----------
 for i in range(5):
     cloud = BackgroundCloud(random.randint(0, WIDTH), random.randint(0, HEIGHT // 2),
                             random.uniform(0.5, 1.5))
@@ -606,15 +582,12 @@ while running:
                 sys.exit()
 
     if not game_over:
-        # Spawn new platforms
         spawn_obstacles()
 
-        # Update all non‑player sprites
         for sprite in all_sprites:
             if not isinstance(sprite, Player):
                 sprite.update()
 
-        # Update players (physics, collisions)
         for p in players:
             if p.lives <= 0:
                 p.active = False
@@ -622,12 +595,10 @@ while running:
                 continue
             p.update(platforms, dt)
 
-        # Apply moving‑platform carry
         for p in players:
             if p.active:
                 p.carry_by_moving_platform(platforms)
 
-        # Magnet effect
         for p in players:
             if p.active and p.magnet:
                 for coin in coins:
@@ -636,38 +607,31 @@ while running:
                     coin.rect.x += int(dx * 0.05)
                     coin.rect.y += int(dy * 0.05)
 
-        # Remove far‑away objects
         cleanup()
 
-        # Check if all players are dead
         active_players = [p for p in players if p.lives > 0]
         if not active_players:
             game_over = True
 
-        # Player out of bounds (fall or rise)
         for p in players:
             if not p.active:
                 continue
-            # Die if too low or too high (with gravity reversal)
             if (not p.gravity_reversed and p.rect.y > HEIGHT + 100) or \
                (p.gravity_reversed and p.rect.bottom < -100):
                 if p.invincible:
-                    # Bounce back
                     p.vel_y = -JUMP_SPEED if not p.gravity_reversed else JUMP_SPEED
                 else:
                     game_over_sound.play()
                     p.lives -= 1
                     if p.lives > 0:
-                        # Respawn near last safe spot (above it)
                         p.rect.center = (p.last_safe_x, p.last_safe_y - RESPAWN_VERTICAL_OFFSET)
                         p.vel_y = 0
                         p.invincible = True
-                        p.invincible_timer = now + 2000  # 2 seconds grace
+                        p.invincible_timer = now + 2000
                     else:
                         p.active = False
                         p.kill()
 
-        # Enemy collisions
         for enemy in enemies:
             for p in players:
                 if not p.active:
@@ -693,7 +657,6 @@ while running:
                             p.active = False
                             p.kill()
 
-        # Coin collection
         for p in players:
             if not p.active:
                 continue
@@ -707,7 +670,6 @@ while running:
                     particles.add(part)
                     all_sprites.add(part)
 
-            # Power‑up collection
             hit_powerups = pygame.sprite.spritecollide(p, powerups, True)
             for pup in hit_powerups:
                 powerup_sound.play()
@@ -727,49 +689,37 @@ while running:
                     p.gravity_reversed = not p.gravity_reversed
                     p.gravity_timer = now + 5000
 
-            # Life item
             hit_life = pygame.sprite.spritecollide(p, lifeitems, True)
             for li in hit_life:
                 p.lives += 1
 
-            # Star
             hit_star = pygame.sprite.spritecollide(p, stars, True)
             for st in hit_star:
                 p.score += 200 * p.score_mul
 
-            # Score over time
             p.score += int(dt * 10 * p.score_mul)
 
-        # Difficulty factor
         difficulty_factor = 1 + sum(p.score for p in players) / 500.0
 
     else:
         if final_time is None:
             final_time = int(time.time() - start_time)
 
-    # Camera: center on average of active players
     active_players = [p for p in players if p.active]
     if active_players:
         avg_x = sum(p.rect.centerx for p in active_players) // len(active_players)
         offset_x = avg_x - WIDTH // 2
-        # Clamp to prevent showing outside world (optional)
-        # offset_x = max(0, min(offset_x, world_width - WIDTH))
     else:
         offset_x = 0
 
-    # Draw
-    # Sky blue background
     screen.fill((135, 206, 235))
 
-    # Background clouds (parallax)
     for cloud in background_clouds:
         screen.blit(cloud.image, (cloud.rect.x - offset_x * 0.5, cloud.rect.y))
 
-    # All sprites with camera offset
     for sprite in all_sprites:
         screen.blit(sprite.image, (sprite.rect.x - offset_x, sprite.rect.y))
 
-    # UI
     for i, p in enumerate(players):
         if p.lives <= 0 and not p.active:
             continue
