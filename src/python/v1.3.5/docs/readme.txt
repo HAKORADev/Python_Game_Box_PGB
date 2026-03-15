@@ -5,10 +5,9 @@ Your new favorite way to waste time responsibly — a collection of 13 addictive
 No violence. No ads. No BS. Just chaos, giggles, and a glowing snake.
 
 
-**Update v1.3.5 — Ultimate Edition**
+**Update v1.3.5**
 Major improvements across all 13 games, with new features, enhanced visuals, and smoother gameplay.
 
-Download: It's Far Away :) in the last part of the page!
 ---
 
 Update Overview – Python Game Box (Flash Revival Vol. 1 V1.3.5)
@@ -194,4 +193,4 @@ Technical Improvements:
 
 Version History:
 - v1.1.1: Bugfix patch with initial improvements, added Matcher
-- v1.3.5: Ultimate Edition with 2 new games (Cosmic Spud, Fruit Slasher), enhanced features, and polished visuals
+- v1.3.5: 2 new games (Cosmic Spud, Fruit Slasher), enhanced features, and polished visuals
