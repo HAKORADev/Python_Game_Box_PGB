@@ -17,9 +17,9 @@
 
 ## About This Repository
 
-This repository serves as a **reference and archival** for Python Game Box (PGB) | Flash Revival. The official releases and complete documentation are available on our itch.io page.
+This repository serves as a **main development and releases** for Python Game Box (PGB) | Flash Revival. The old releases and complete documentation are available on itch.io page and all feature updates will be here.
 
-### 🎮 Official Release
+### 🎮 old Release
 **[Python Game Box (PGB) | Flash Revival](https://hakoradev.itch.io/python-game-box-pgb-flash-revival)**
 
 All detailed information, game lists, screenshots, and installation guides can be found on the official itch.io page.
