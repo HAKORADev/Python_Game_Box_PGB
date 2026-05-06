@@ -1,4 +1,8 @@
-# Python Game Box (PGB) | Flash Revival
+<p align="center">
+  <img src="logo.png" alt="Python Game Box Logo" width="256">
+</p>
+
+<h1 align="center">Python Game Box (PGB) | Flash Revival</h1>
 
 <p align="center">
   <strong>A collection of classic Flash games rebuilt with pure Python</strong>
@@ -43,6 +47,7 @@ PGB/
 │   └── python/              # Python source code
 │       ├── v1.3.5/          # 13 games
 │       └── v1.3.8/          # 14 games (Pop TD added)
+├── logo.png                 # Project logo
 ├── requirements.txt         # Python dependencies
 ├── LICENSE
 └── README.md
