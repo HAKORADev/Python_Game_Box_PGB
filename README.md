@@ -47,7 +47,9 @@ PGB/
 │   └── python/              # Python source code
 │       ├── v1.3.5/          # 13 games
 │       └── v1.3.8/          # 14 games (Pop TD added)
+├── assets/                  # Game screenshots (all versions)
 ├── logo.png                 # Project logo
+├── showcase.md              # Screenshot gallery
 ├── requirements.txt         # Python dependencies
 ├── LICENSE
 └── README.md
@@ -61,6 +63,8 @@ The `src/` directory is organized by language/platform. Drop any new source code
 ---
 
 ## Game Collection (v1.3.8 — 14 Games)
+
+> 📸 **[View all screenshots →](showcase.md)** — Every game across every version
 
 | Game | Type | Description |
 |------|------|-------------|
