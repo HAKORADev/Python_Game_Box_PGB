@@ -4,3 +4,4 @@ pymunk
 numpy
 scipy
 PyQt5
+PyOpenGL  # Optional: GPU-accelerated rendering for Pop_TD

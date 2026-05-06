@@ -1,0 +1,67 @@
+Python Game Box (PGB) — V1.3.8 Release Notes
+==============================================
+
+Release Date: May 2026
+Total Games: 14 (was 13 in v1.3.5)
+
+
+What's New
+----------
+
+NEW GAME: Pop TD
+  A tower defense game featuring 6 tower types, 15 enemy waves, dual
+  upgrade paths, and GPU-accelerated rendering.
+
+  Tower Types:
+  - Sharp ($50) — Basic single-target tower, pops lead balloons
+  - Cannon ($100) — Area damage with blast radius
+  - Frost ($75) — Slows and freezes enemies
+  - Laser ($120) — Energy beam, high fire rate
+  - Missile ($150) — Long range, splash damage
+  - Plasma ($200) — High damage, special energy type
+
+  Features:
+  - 15 waves of increasingly difficult enemies
+  - 2 upgrade paths per tower (2 upgrades each)
+  - Sell towers back for 70% of total investment
+  - Speed controls: 1x, 2x, 3x
+  - Auto-start wave toggle
+  - Pause and restart support
+  - GPU-accelerated rendering via OpenGL (optional, automatic CPU fallback)
+  - Procedurally generated sound effects
+
+  Controls:
+  - Mouse (Left Click): Select/place towers, click UI buttons
+  - Mouse (Right Click): Deselect
+  - SPACE: Start next wave
+  - 1/2/3: Game speed (Normal / 2x / 3x)
+  - P: Pause
+  - R: Restart
+  - A: Toggle auto-start waves
+
+  New Dependency (Optional):
+  - PyOpenGL — Required for GPU rendering path in Pop TD. The game
+    works without it (CPU fallback), but GPU mode gives smoother
+    performance with many towers/projectiles on screen.
+
+
+Carried Forward (Unchanged)
+----------------------------
+
+All 13 games from v1.3.5 are included unchanged:
+
+  2048, Cosmic Spud, Dario, Escape The Maze, Fruit Slasher,
+  Geometry Flash, Hen Invaders, Keyboard Singer, Matcher,
+  Pong, Snake, Snowy Tower, XO
+
+
+Repository Changes
+------------------
+
+- Added src/python/v1.3.8/ directory with all v1.3.8 games
+- Added docs/changelog.txt with full version history (v1.0 to v1.3.8)
+- Added docs/v1.3.8_readme.txt (this file)
+- Updated docs/Controls.txt with Pop TD controls
+- Updated docs/about.txt for v1.3.8
+- Updated requirements.txt with PyOpenGL (optional)
+- Updated README.md with new repo structure

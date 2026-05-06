@@ -1,0 +1,37 @@
+Welcome to the Python Game Box (PGB V1.3.8)!
+
+This is a set of 14 simple and fun games developed using Python.
+Each game is lightweight and easy to run on almost any computer.
+
+Included Games:
+- 2048 - Classic number puzzle game with single player and VS mode
+- Cosmic Spud - Survival shooter with auto-shoot mechanics and wave-based enemies
+- Dario - Platformer game with coins, enemies, and power-ups
+- Escape The Maze - Navigate through procedurally generated mazes
+- Fruit Slasher - Slice fruits and avoid bombs
+- Geometry Flash - Switch lanes to avoid obstacles
+- Hen Invaders - Classic space invaders with power-ups and 2-player mode
+- Keyboard Singer - Musical keyboard with 10 instruments and multiple modes
+- Matcher - Match-3 gem puzzle game with special powers
+- Pop TD - Tower defense with 6 tower types, 15 enemy waves, upgrade system, and GPU-accelerated rendering
+- Pong - Classic ping pong with AI and multiplayer
+- Snake - Classic snake game with AI mode and 2-player support
+- Snowy Tower - Jump between platforms to climb higher
+- XO (Tic Tac Toe) - Classic game with 4 AI difficulties
+
+Controls:
+Please refer to the "Controls.txt" file in the docs/ directory.
+
+System Requirements:
+- Windows OS / Linux OS
+- Python 3.x installed
+- Required Python packages (see requirements.txt at repo root)
+- Basic keyboard and mouse input
+
+GitHub Repository:
+https://github.com/HAKORADev/Python_Game_Box_PGB
+
+Note:
+All games are free to play and distributed for educational and entertainment purposes.
+
+Enjoy!

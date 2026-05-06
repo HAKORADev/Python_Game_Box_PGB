@@ -1,0 +1,278 @@
+================================================================================
+                    PYTHON GAME BOX (PGB) - CHANGELOG
+                        Flash Revival - All Versions
+================================================================================
+
+Source: GitHub Releases, itch.io Devlogs/Forums (Wayback Machine cached),
+        and repository commit history.
+
+================================================================================
+v1.3.8 — May 2026
+================================================================================
+
+  New Game:
+  - Pop TD — Tower Defense game with 6 tower types (Sharp, Cannon, Frost,
+    Laser, Missile, Plasma), 15 enemy waves, upgrade system, sell towers,
+    GPU-accelerated rendering via OpenGL, and procedural sound effects.
+
+  Notes:
+  - Pop TD uses OpenGL for GPU-accelerated rendering where available, with
+    automatic CPU fallback.
+  - Additional dependency: PyOpenGL (optional, for GPU rendering path).
+  - All 13 games from v1.3.5 are carried forward unchanged.
+
+
+================================================================================
+v1.3.5 — March 14-15, 2026
+================================================================================
+
+  New Games:
+  - Cosmic Spud — Survival shooter with auto-fire mechanics, wave-based enemy
+    spawning with increasing difficulty, 10 unique enemy types (Basic, Fast,
+    Tank, Ranged, Shooter, Aura, Spawner, Minion, Shielded, Healer), 10
+    upgrade options with rarity system (Common, Rare, Epic), WASD/Arrow
+    movement with mouse aiming, level-up system with permanent stat upgrades,
+    critical hits, piercing shots, and multi-shot abilities.
+  - Fruit Slasher — Swipe to slice fruits with mouse, avoid bombs (instant
+    game over), combo system for multiple slices, 3 lives system, particle
+    juice effects on slices, fruit halves fall with physics, high score
+    tracking, start screen and game over screen.
+
+  Game Changes (v1.1.1 → v1.3.5):
+
+  Matcher:
+  - 5 gem colors with cascade effects
+  - 4 Special Powers: Matcher (auto-swap), Cleaner (clear row/col),
+    Bomber (4x4 area), Vanisher (clear all of one color)
+  - Round-based progression with increasing difficulty
+  - Timer and move counter
+  - Particle effects and smooth animations
+
+  2048:
+  - VS Player Mode with split board design (P1: WASD, P2: Arrow keys)
+  - Particle effects on tile merges
+  - Animated tile movements
+  - Visual enhancements for tiles and transitions
+
+  Dario:
+  - 2 Players Mode (P2: A/D move, W jump)
+  - Shared camera tracking both players
+  - 5 Platform types: Static, Moving, Disappearing, Boost
+  - 5 Power-Up types: Invincibility, Magnet, Slowmo, Score Multiplier,
+    Gravity Reversal
+  - Flying and rolling enemies
+  - Particle effects and animations
+
+  Escape The Maze:
+  - Path Finder Power-Up (shows 5 steps ahead for 10 seconds, earned every
+    2 wins, activated with Enter)
+  - Enemy types: Red (chasing) and White (shooting)
+  - Bullet dodging mechanics
+  - Timer-based gameplay
+  - Maze generation enhanced with dynamic scaling
+
+  Geometry Flash:
+  - Moving black obstacle squares (right to left, varied speeds)
+  - Speed multiplier that increases over time
+  - Coins for scoring
+  - Pusher platforms that carry the player
+  - Menu system with instructions
+  - Smoothed acceleration & deceleration
+
+  Hen Invaders:
+  - 2 Players Mode (P2: A/D move, W shoot, E rockets)
+  - AI Ship Power-Up: helps kill hens for 3 waves (press C)
+  - Power-Up spawns increased (2-10 instead of 1-5)
+  - Weapon upgrade system (spread shots, rockets)
+  - Enhanced chicken movement patterns
+  - Faster weapon response
+
+  Keyboard Singer:
+  - 10 Instrument Banks: Xylophone, Piano, Electric Guitar, BeatBox, Organ,
+    Flute, Violin, Trumpet, Bass, Synth
+  - Adjustable melody length in Free Play Mode (LAlt+RAlt)
+  - Key Tapper Mode — type words against the clock
+  - Longoly Mode — sustained notes while holding keys
+  - Random melody generator (TAB key)
+  - Reduced input lag, improved audio syncing
+
+  Pong:
+  - 3 AI difficulty levels (Easy, Medium, Hard)
+  - Ball trail effect
+  - Particle background
+  - Color-changing dynamic background
+  - Enhanced ball physics
+
+  Snake:
+  - VS AI Mode with 3 difficulty levels (A* pathfinding)
+  - 2 Players Mode (P2: WASD, Yellow Snake)
+  - Black square hazard (touch = game over)
+  - Speed increases x1.1 every 10 points
+  - Particle effects, ripple animations, glowing visuals
+
+  Snowy Tower:
+  - VS AI (Easy/Medium/Hard) and VS Player modes (P2: A/D)
+  - 5 Platform types: Static, Moving, Blinking, Disappearing,
+    Moving-Blinking
+  - Revamped camera system
+  - Snow particles and cloud effects
+  - Gradient backgrounds
+
+  XO (Tic Tac Toe):
+  - 4 AI difficulties: Easy, Medium, Hard, Overkill (perfect minimax)
+  - AI taunts and messages
+  - Sound effects and background music
+  - Particle effects on wins
+  - Score tracking across games
+
+  Technical Improvements:
+  - All games use PyQt5 or Pygame for consistent rendering
+  - Pymunk physics engine for realistic particle effects
+  - Pyganim for smooth sprite animations
+  - Generated sound effects using numpy (no external audio files needed)
+  - Consistent 60 FPS across all games
+  - Dynamic backgrounds and visual effects
+  - Responsive controls with minimal input lag
+  - Now runs on Linux (in addition to Windows)
+  - Source code released on GitHub (previous versions were exe-only)
+
+
+================================================================================
+v1.1.1 — April 18, 2025
+================================================================================
+
+  Bug Fixes (8 of 11 games patched):
+
+  Keyboard Singer:
+  - Fixed UI glitch in Key Tapper mode — keys no longer merge with underline
+
+  Dario:
+  - 2-Player mode now has reachable platforms
+
+  Escape The Maze:
+  - Player size now scales properly with the maze after 15 wins
+
+  Snake:
+  - Fixed instant death when pressing opposite directions fast
+
+  Snowy Tower:
+  - Platform difficulty tuning (harder platforms)
+
+  Matcher:
+  - Bombs now display correctly
+  - Powers work properly now
+
+  2048:
+  - Menu text sizes now match their boxes
+
+  Hen Invaders:
+  - Player 2 is now orange (was green — color conflict fix)
+
+  Download:
+  - Python_Game_Box_V1.1.1.zip (Windows EXE, 353MB)
+  - Available on itch.io and MediaFire
+
+
+================================================================================
+v1.1 — April 16, 2025
+================================================================================
+
+  New Game:
+  - Matcher — Match-3 gem puzzle game, arcade style, creative matching
+    mechanics
+
+  Major Changes:
+
+  All Games:
+  - Fixed Window Resolution: Every game now launches with a stable, centered
+    window resolution, avoiding weird scaling issues or offset positions
+  - Improved Visuals & Animations: Smoother transitions, better particle
+    behavior, more dynamic animations, juicier feedback
+
+  2048:
+  - New VS Player Mode (split board, P1: arrow keys, P2: WASD)
+  - Win/lose system implemented
+  - Visual enhancements
+
+  Dario:
+  - Added 2-Player Mode (P2: A/D move, W jump)
+  - Shared camera tracking both players
+
+  Escape The Maze:
+  - New Path Finder Power-Up (shows 5 steps ahead for 10s)
+  - Pathfinding optimized
+  - Maze generation enhanced
+
+  Geometry Flash:
+  - Moving black obstacle squares
+  - Better player control, smoothed acceleration/deceleration
+
+  Hen Invaders:
+  - Added 2-Player Mode (P2: A/D move, W shoot, E rockets)
+  - AI Ship Power-Up (press C)
+  - More power-up spawns (2-10)
+
+  Keyboard Singer:
+  - Adjustable melody length in Freeplay Mode (LAlt+RAlt)
+  - Reduced input lag
+  - Improved audio syncing
+
+  Pong:
+  - More responsive paddles
+  - Enhanced ball physics
+  - Slight AI improvements
+
+  Snake:
+  - 2-Player Mode (P2: WASD)
+  - VS AI Mode
+  - Black square hazard added
+  - Speed increases x1.1 every 10 points
+
+  Snowy Tower:
+  - New VS AI and VS Player modes
+  - Revamped camera system
+
+  XO (Tic Tac Toe):
+  - Improved AI decision-making
+  - Faster turn recognition
+  - Visual upgrades
+  - New sound cues
+
+  Download:
+  - Python_Game_Box_V1.1.exe (Windows EXE)
+  - Available on itch.io and MediaFire
+
+
+================================================================================
+v1.0 — April 15, 2025
+================================================================================
+
+  Initial Release — "Python Game Box (PGB) | Flash Revival Vol.1"
+
+  Included 10 Games:
+  1. 2048 — Classic tile puzzle with smooth visuals
+  2. Dario — Platformer with coins, enemies, and power-ups
+  3. Escape The Maze — 60-second maze escape challenge
+  4. Geometry Flash — Geometry Dash meets electronic chaos
+  5. Hen Invaders — Space Invaders with chickens, lasers, feathers
+  6. Keyboard Singer — Musical keyboard with multiple instruments
+  7. Pong — Classic ping pong with smart AI opponent
+  8. Snake — Classic snake game with glowing visuals
+  9. Snowy Tower — Icy Tower-inspired platformer
+  10. XO (Tic Tac Toe) — With AI opponent
+
+  Platform: Windows (standalone EXE)
+  Download: Python_Game_Box.exe (353MB installer)
+  Available on: itch.io
+
+  Key Features:
+  - Standalone EXE files (no setup required)
+  - Runs offline
+  - 1280x720 minimum resolution
+  - Custom audio & animations
+  - 100% pure Python — no game engines
+
+
+================================================================================
+                         END OF CHANGELOG
+================================================================================

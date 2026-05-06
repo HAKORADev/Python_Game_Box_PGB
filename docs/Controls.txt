@@ -177,3 +177,31 @@
 - **ESC**: Exit
 
 ---
+
+### **Pop TD** (v1.3.8+)
+- **Mouse (Left Click)**: Select tower from shop, place tower on valid grid cell, select placed tower, click upgrade/sell buttons
+- **Mouse (Right Click)**: Deselect current selection
+- **SPACE**: Start next wave
+- **1**: Normal game speed
+- **2**: 2x game speed
+- **3**: 3x game speed
+- **P**: Pause / Unpause
+- **R**: Restart game
+- **A**: Toggle auto-start waves
+
+#### *Tower Types*:
+- **Sharp** ($50): Basic single-target, pops lead balloons
+- **Cannon** ($100): Area damage with blast radius
+- **Frost** ($75): Slows and freezes enemies
+- **Laser** ($120): Energy beam, high fire rate
+- **Missile** ($150): Long range, splash damage
+- **Plasma** ($200): High damage, special energy type
+
+#### *Gameplay*:
+- Place towers on grass (green) cells — not on the path
+- Each tower has 2 upgrade paths with 2 upgrades each
+- Sell towers for 70% of total investment
+- Survive 15 waves to win
+- GPU-accelerated rendering (requires PyOpenGL; falls back to CPU)
+
+---
