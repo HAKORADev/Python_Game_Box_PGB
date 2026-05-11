@@ -4,11 +4,11 @@ The first web-based addition to the Python Game Box collection. Built with Next.
 
 ## Games
 
-| Game | Version | Screenshot |
-|------|---------|------------|
-| 🐍 **3D Snake** | v0.1.0 | ![3D Snake](../../assets/snake3d-0.1.0.png) |
+| Game | Version | Type |
+|------|---------|------|
+| 🐍 **3D Snake** | v0.1.0 | Arcade |
 
-> 📸 **[View all screenshots →](../../showcase.md)**
+> 📸 **[View screenshots →](../../showcase.md)**
 
 ## How to Run Locally
 
