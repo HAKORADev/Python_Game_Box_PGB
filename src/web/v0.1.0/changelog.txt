@@ -28,7 +28,6 @@ v0.1.0 — May 2026
         lamp color, volume
   [NEW] Mobile support with swipe controls
   [NEW] High score persistence (localStorage)
-  [NEW] GitHub Pages deployment at:
-        https://hakoradev.github.io/Python_Game_Box_PGB/
+  [NEW] Screenshot showcase image added
 
 ============================================================

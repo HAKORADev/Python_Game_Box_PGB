@@ -15,21 +15,18 @@
   <a href="https://github.com/HAKORADev/Python_Game_Box_PGB">
     <img alt="GitHub" src="https://img.shields.io/badge/Repo-Python_Game_Box-181717?style=for-the-badge&logo=github">
   </a>
-  <a href="https://hakoradev.github.io/Python_Game_Box_PGB/">
-    <img alt="Play Online" src="https://img.shields.io/badge/Play-3D_Snake_Online-22c55e?style=for-the-badge&logo=github">
-  </a>
 </p>
 
 ---
 
 ## About
 
-Python Game Box (PGB) is a nostalgic tribute to the golden age of Flash games. It features a curated collection of classic mini-games, originally written in **100% pure Python code**, and now expanding into **web-based games** that run directly in your browser.
+Python Game Box (PGB) is a nostalgic tribute to the golden age of Flash games. It features a curated collection of classic mini-games, originally written in **100% pure Python code**, and now expanding into **web-based games** powered by Three.js and React — run locally with a single command.
 
 ### Key Features
 
 - **Pure Python**: All Python games are built from scratch using only Python and standard libraries
-- **Web Games**: Browser-based games powered by Next.js, Three.js, and React — no installation needed
+- **Web Games**: Browser-based games powered by Next.js, Three.js, and React — just `npm run dev`
 - **Lightweight**: Simple, fast, and easy to run
 - **Nostalgic**: Brings back the fun of classic Flash-era mini-games
 - **Cross-Platform**: Python source code runs on Windows, Linux, and macOS; Web games run anywhere
@@ -37,13 +34,27 @@ Python Game Box (PGB) is a nostalgic tribute to the golden age of Flash games. I
 
 ---
 
-## 🎮 Play Online
+## 🐍 Web Games (v0.1.0)
 
-| Game | Version | Platform | Link |
-|------|---------|----------|------|
-| 🐍 **3D Snake** | v0.1.0 | Web | [▶ Play Now](https://hakoradev.github.io/Python_Game_Box_PGB/) |
+<p align="center">
+  <img src="assets/snake3d-0.1.0.png" alt="3D Snake Gameplay" width="720">
+</p>
 
-> No download or installation required — just click and play in your browser!
+| Game | Type | Description |
+|------|------|-------------|
+| 🐍 **3D Snake** | Arcade | 3D Snake with path tracing, day/night cycle, arcade mode, 6 power-ups, CPU rival |
+
+### Run 3D Snake Locally
+
+```bash
+cd src/web/v0.1.0/Snake3D/
+npm install
+npm run dev
+```
+
+Then open **http://localhost:3000** in your browser.
+
+> Requires [Node.js](https://nodejs.org/) v18+ and a modern browser with WebGL 2 support.
 
 ---
 
@@ -64,6 +75,7 @@ PGB/
 │   └── web/                 # Web source code
 │       └── v0.1.0/          # Web games v0.1.0
 │           ├── Snake3D/     # 3D Snake (Next.js + Three.js)
+│           ├── snake3d-0.1.0.png  # Screenshot
 │           ├── readme.md    # Web version readme
 │           ├── about.txt    # About this version
 │           ├── controls.txt # Controls reference
@@ -103,12 +115,6 @@ The `src/` directory is organized by language/platform. Drop any new source code
 | **Snake** | Arcade | Classic snake with AI mode and 2-player support |
 | **Snowy Tower** | Platformer | Jump between platforms to climb higher |
 | **XO** | Puzzle | Tic Tac Toe with 4 AI difficulties |
-
-## Web Games (v0.1.0)
-
-| Game | Type | Description | Play |
-|------|------|-------------|------|
-| 🐍 **3D Snake** | Arcade | 3D Snake with path tracing, day/night cycle, arcade mode, power-ups | [▶ Play](https://hakoradev.github.io/Python_Game_Box_PGB/) |
 
 ---
 
@@ -171,7 +177,6 @@ See [docs/changelog.txt](docs/changelog.txt) for the full detailed changelog.
 - **Styling**: Tailwind CSS 4 + shadcn/ui
 - **State**: Zustand
 - **Platform**: Any modern browser with WebGL 2
-- **Hosting**: GitHub Pages
 - **Audio**: Web Audio API (procedurally generated)
 
 ---

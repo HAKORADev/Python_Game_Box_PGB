@@ -4,7 +4,15 @@ Screenshots from every version of Python Game Box. Click any image to view full 
 
 ---
 
-## v1.3.8 (Latest)
+## Web v0.1.0
+
+| Game | Screenshot |
+|------|-----------|
+| 🐍 **3D Snake** | ![3D Snake v0.1.0](assets/snake3d-0.1.0.png) |
+
+---
+
+## v1.3.8 (Latest — Python)
 
 | Game | Screenshot |
 |------|-----------|

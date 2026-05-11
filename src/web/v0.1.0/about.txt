@@ -13,13 +13,13 @@ and React Three Fiber. It features real-time path tracing,
 a dynamic day/night cycle with volumetric god rays, and an
 arcade mode with procedurally generated maps.
 
-Unlike the Python games which require local installation,
-the web version runs entirely in the browser with zero
-setup — just click and play.
+The game runs locally via a simple `npm run dev` command —
+no server hosting or cloud deployment needed. Just clone,
+install, and play.
 
 Key Highlights:
   - First web game in the PGB collection
-  - Runs entirely client-side (no server needed)
+  - Runs entirely client-side via local dev server
   - Built with Next.js 16 + React 19 + Three.js
   - Mobile-friendly with swipe controls
   - Procedurally generated arcade maps
