@@ -187,7 +187,7 @@ Every Python game in this collection is written entirely in Python without using
 
 ## License
 
-This software is provided for personal, non-commercial use. See the included LICENSE file for more details.
+This software is provided for personal, commercial use. See the included LICENSE file for more details.
 
 ---
 
