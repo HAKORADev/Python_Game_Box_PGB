@@ -2,15 +2,13 @@
 
 The first web-based addition to the Python Game Box collection. Built with Next.js, React Three Fiber, and Tailwind CSS.
 
-<p align="center">
-  <img src="snake3d-0.1.0.png" alt="3D Snake Gameplay" width="720">
-</p>
-
 ## Games
 
 | Game | Version | Screenshot |
 |------|---------|------------|
-| 🐍 **3D Snake** | v0.1.0 | ![3D Snake](snake3d-0.1.0.png) |
+| 🐍 **3D Snake** | v0.1.0 | ![3D Snake](../../assets/snake3d-0.1.0.png) |
+
+> 📸 **[View all screenshots →](../../showcase.md)**
 
 ## How to Run Locally
 
@@ -27,7 +25,6 @@ The first web-based addition to the Python Game Box collection. Built with Next.
 ```
 src/web/v0.1.0/
 ├── Snake3D/              # 3D Snake game (Next.js + Three.js)
-├── snake3d-0.1.0.png     # Screenshot
 ├── readme.md             # This file
 ├── about.txt             # About this version
 ├── controls.txt          # Controls reference

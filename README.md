@@ -37,7 +37,6 @@ Python Game Box (PGB) is a nostalgic tribute to the golden age of Flash games. I
 ## 🐍 Web Games (v0.1.0)
 
 <p align="center">
-  <img src="assets/snake3d-0.1.0.png" alt="3D Snake Gameplay" width="720">
 </p>
 
 | Game | Type | Description |
@@ -75,7 +74,6 @@ PGB/
 │   └── web/                 # Web source code
 │       └── v0.1.0/          # Web games v0.1.0
 │           ├── Snake3D/     # 3D Snake (Next.js + Three.js)
-│           ├── snake3d-0.1.0.png  # Screenshot
 │           ├── readme.md    # Web version readme
 │           ├── about.txt    # About this version
 │           ├── controls.txt # Controls reference
