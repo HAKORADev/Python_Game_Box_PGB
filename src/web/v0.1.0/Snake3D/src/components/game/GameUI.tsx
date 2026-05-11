@@ -429,7 +429,7 @@ export default function GameUI() {
             </div>
 
             
-            <div className="bg-black/60 backdrop-blur-sm rounded-xl px-3 py-2 border border-white/10 flex flex-col items-center gap-0.5">
+            <div className="absolute left-1/2 -translate-x-1/2 bg-black/60 backdrop-blur-sm rounded-xl px-3 py-2 border border-white/10 flex flex-col items-center gap-0.5">
               <div className={`text-xs font-bold uppercase tracking-wider ${isArcade ? 'text-orange-400' : 'text-blue-400'}`}>
                 {isArcade ? 'Arcade' : 'Classic'}
               </div>
@@ -437,6 +437,14 @@ export default function GameUI() {
               {openSideCount > 0 && <div className="text-cyan-400 text-[10px]">Wrap {openSideCount === 4 ? 'All' : `${openSideCount} side${openSideCount > 1 ? 's' : ''}`}</div>}
               <div className="border-t border-white/10 w-full my-0.5" />
               <div className="text-[11px] tabular-nums">{gameTime.icon} {gameTime.text}</div>
+            </div>
+
+            
+            <div className="invisible">
+              <div className="bg-black/60 backdrop-blur-sm rounded-xl px-4 py-3 border border-white/10">
+                <div className="text-emerald-400 text-xs font-semibold uppercase tracking-wider">&nbsp;</div>
+                <div className="text-white text-3xl font-bold tabular-nums">&nbsp;</div>
+              </div>
             </div>
           </div>
 
