@@ -1,0 +1,34 @@
+============================================================
+  PGB Web — Changelog
+============================================================
+
+v0.1.0 — May 2026
+------------------
+  [NEW] First web game in the PGB collection
+  [NEW] 3D Snake game with full 3D rendering via Three.js
+  [NEW] Classic mode: 20x20 grid with day/night cycle
+  [NEW] Arcade mode with procedurally generated maps:
+        - Random grid sizes (14x14 to 24x24)
+        - Maze-like interior walls (recursive division)
+        - Wrap-around open edges (0-4 sides)
+        - CPU snake rival with BFS pathfinding AI
+        - Apple-pushing bug enemy
+        - Street lamps with yellow/white color options
+        - Night fireflies ambient effect
+  [NEW] 6 power-up types: Golden, Immortal, Growth,
+        Speed, Slow, Black
+  [NEW] Dynamic day/night cycle (12-minute full cycle)
+  [NEW] Volumetric god rays (sun and moon)
+  [NEW] PBR materials (clearcoat, metalness, roughness)
+  [NEW] Dynamic shadows (dynamic or fixed angle)
+  [NEW] Smooth snake interpolation with smoothstep easing
+  [NEW] Procedurally generated sound effects (Web Audio API)
+  [NEW] Ambient wind/nature sound
+  [NEW] Settings panel: time control, clouds, shadows,
+        lamp color, volume
+  [NEW] Mobile support with swipe controls
+  [NEW] High score persistence (localStorage)
+  [NEW] GitHub Pages deployment at:
+        https://hakoradev.github.io/Python_Game_Box_PGB/
+
+============================================================

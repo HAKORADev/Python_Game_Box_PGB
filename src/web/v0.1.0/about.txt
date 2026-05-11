@@ -1,0 +1,32 @@
+============================================================
+  PGB Web — v0.1.0 — About
+============================================================
+
+Python Game Box (PGB) has been a pure-Python collection of
+classic Flash-era mini-games since 2025. With v0.1.0, PGB
+expands beyond Python into the web browser, bringing the
+same nostalgic fun powered by modern web technologies.
+
+This version introduces the first web game: 3D Snake, a
+fully 3D remake of the classic Snake game using Three.js
+and React Three Fiber. It features real-time path tracing,
+a dynamic day/night cycle with volumetric god rays, and an
+arcade mode with procedurally generated maps.
+
+Unlike the Python games which require local installation,
+the web version runs entirely in the browser with zero
+setup — just click and play.
+
+Key Highlights:
+  - First web game in the PGB collection
+  - Runs entirely client-side (no server needed)
+  - Built with Next.js 16 + React 19 + Three.js
+  - Mobile-friendly with swipe controls
+  - Procedurally generated arcade maps
+  - 6 power-up types in arcade mode
+  - CPU snake rival with BFS pathfinding AI
+  - Dynamic day/night cycle with volumetric lighting
+
+Developed by HAKORAdev
+https://github.com/HAKORADev
+============================================================

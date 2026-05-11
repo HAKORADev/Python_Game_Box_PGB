@@ -5,7 +5,7 @@
 <h1 align="center">Python Game Box (PGB) | Flash Revival</h1>
 
 <p align="center">
-  <strong>A collection of classic Flash games rebuilt with pure Python</strong>
+  <strong>A collection of classic Flash games rebuilt with pure Python & Web</strong>
 </p>
 
 <p align="center">
@@ -15,21 +15,35 @@
   <a href="https://github.com/HAKORADev/Python_Game_Box_PGB">
     <img alt="GitHub" src="https://img.shields.io/badge/Repo-Python_Game_Box-181717?style=for-the-badge&logo=github">
   </a>
+  <a href="https://hakoradev.github.io/Python_Game_Box_PGB/">
+    <img alt="Play Online" src="https://img.shields.io/badge/Play-3D_Snake_Online-22c55e?style=for-the-badge&logo=github">
+  </a>
 </p>
 
 ---
 
 ## About
 
-Python Game Box (PGB) is a nostalgic tribute to the golden age of Flash games. It features a curated collection of classic mini-games, all written in **100% pure Python code**. No game engines, no frameworks — just Python.
+Python Game Box (PGB) is a nostalgic tribute to the golden age of Flash games. It features a curated collection of classic mini-games, originally written in **100% pure Python code**, and now expanding into **web-based games** that run directly in your browser.
 
 ### Key Features
 
-- **Pure Python**: All games are built from scratch using only Python and standard libraries
+- **Pure Python**: All Python games are built from scratch using only Python and standard libraries
+- **Web Games**: Browser-based games powered by Next.js, Three.js, and React — no installation needed
 - **Lightweight**: Simple, fast, and easy to run
 - **Nostalgic**: Brings back the fun of classic Flash-era mini-games
-- **Cross-Platform**: Source code runs on Windows, Linux, and macOS
+- **Cross-Platform**: Python source code runs on Windows, Linux, and macOS; Web games run anywhere
 - **Extensible**: Add new language ports under src/ (e.g. src/cpp/, src/web/)
+
+---
+
+## 🎮 Play Online
+
+| Game | Version | Platform | Link |
+|------|---------|----------|------|
+| 🐍 **3D Snake** | v0.1.0 | Web | [▶ Play Now](https://hakoradev.github.io/Python_Game_Box_PGB/) |
+
+> No download or installation required — just click and play in your browser!
 
 ---
 
@@ -44,9 +58,16 @@ PGB/
 │   ├── v1.3.5_readme.txt    # v1.3.5 release notes
 │   └── v1.3.8_readme.txt    # v1.3.8 release notes
 ├── src/
-│   └── python/              # Python source code
-│       ├── v1.3.5/          # 13 games
-│       └── v1.3.8/          # 14 games (Pop TD added)
+│   ├── python/              # Python source code
+│   │   ├── v1.3.5/          # 13 games
+│   │   └── v1.3.8/          # 14 games (Pop TD added)
+│   └── web/                 # Web source code
+│       └── v0.1.0/          # Web games v0.1.0
+│           ├── Snake3D/     # 3D Snake (Next.js + Three.js)
+│           ├── readme.md    # Web version readme
+│           ├── about.txt    # About this version
+│           ├── controls.txt # Controls reference
+│           └── changelog.txt# Version changelog
 ├── assets/                  # Game screenshots (all versions)
 ├── logo.png                 # Project logo
 ├── showcase.md              # Screenshot gallery
@@ -62,7 +83,7 @@ The `src/` directory is organized by language/platform. Drop any new source code
 
 ---
 
-## Game Collection (v1.3.8 — 14 Games)
+## Game Collection (Python — v1.3.8 — 14 Games)
 
 > 📸 **[View all screenshots →](showcase.md)** — Every game across every version
 
@@ -83,6 +104,12 @@ The `src/` directory is organized by language/platform. Drop any new source code
 | **Snowy Tower** | Platformer | Jump between platforms to climb higher |
 | **XO** | Puzzle | Tic Tac Toe with 4 AI difficulties |
 
+## Web Games (v0.1.0)
+
+| Game | Type | Description | Play |
+|------|------|-------------|------|
+| 🐍 **3D Snake** | Arcade | 3D Snake with path tracing, day/night cycle, arcade mode, power-ups | [▶ Play](https://hakoradev.github.io/Python_Game_Box_PGB/) |
+
 ---
 
 ## Downloads
@@ -97,11 +124,19 @@ The `src/` directory is organized by language/platform. Drop any new source code
 
 > **Note**: These are pre-compiled Windows executables. The itch.io page is no longer available. Source code for v1.3.5+ is available in this repository.
 
-### Running from Source
+### Running Python Games from Source
 
 1. Install Python 3.x
 2. Install dependencies: `pip install -r requirements.txt`
 3. Run any game: `python src/python/v1.3.8/<game>.py`
+
+### Running Web Games Locally
+
+1. Install [Node.js](https://nodejs.org/) (v18+)
+2. Navigate to a web game: `cd src/web/v0.1.0/Snake3D/`
+3. Install dependencies: `npm install`
+4. Start dev server: `npm run dev`
+5. Open [http://localhost:3000](http://localhost:3000)
 
 ---
 
@@ -109,6 +144,7 @@ The `src/` directory is organized by language/platform. Drop any new source code
 
 | Version | Date | Games | Highlights |
 |---------|------|-------|------------|
+| **Web v0.1.0** | May 2026 | 1 (web) | 3D Snake — first web game, Three.js, arcade mode, power-ups |
 | **v1.3.8** | May 2026 | 14 | Pop TD added (tower defense) |
 | **v1.3.5** | Mar 2026 | 13 | Cosmic Spud + Fruit Slasher, major improvements |
 | **v1.1.1** | Apr 2025 | 11 | Bug fixes across 8 games |
@@ -121,6 +157,7 @@ See [docs/changelog.txt](docs/changelog.txt) for the full detailed changelog.
 
 ## Technical Details
 
+### Python Games
 - **Language**: 100% Pure Python
 - **Libraries**: PyQt5, Pygame, Pymunk, Pyganim, NumPy, SciPy
 - **Optional**: PyOpenGL (GPU rendering in Pop TD)
@@ -128,11 +165,20 @@ See [docs/changelog.txt](docs/changelog.txt) for the full detailed changelog.
 - **FPS**: Consistent 60 FPS across all games
 - **Audio**: Procedurally generated (no external audio files)
 
+### Web Games
+- **Framework**: Next.js 16 (React 19)
+- **3D Engine**: Three.js + React Three Fiber + React Three Postprocessing
+- **Styling**: Tailwind CSS 4 + shadcn/ui
+- **State**: Zustand
+- **Platform**: Any modern browser with WebGL 2
+- **Hosting**: GitHub Pages
+- **Audio**: Web Audio API (procedurally generated)
+
 ---
 
 ## Why Pure Python?
 
-Every game in this collection is written entirely in Python without using game engines like Unity or Godot. This demonstrates what's possible with standard Python libraries and serves as a testament to the language's versatility.
+Every Python game in this collection is written entirely in Python without using game engines like Unity or Godot. This demonstrates what's possible with standard Python libraries and serves as a testament to the language's versatility.
 
 ---
 
@@ -153,4 +199,5 @@ This software is provided for personal, non-commercial use. See the included LIC
 
 - The Flash game community for inspiring generations of web games
 - Python Software Foundation for an amazing programming language
+- The Three.js and React Three Fiber communities for incredible 3D web tools
 - Everyone who enjoys nostalgic gaming experiences!

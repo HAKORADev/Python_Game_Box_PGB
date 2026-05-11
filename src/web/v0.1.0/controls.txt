@@ -1,0 +1,43 @@
+============================================================
+  PGB Web — v0.1.0 — Controls
+============================================================
+
+3D Snake Controls
+-----------------
+
+Movement:
+  Arrow Keys ............. Move snake (Up/Down/Left/Right)
+  W/A/S/D ............... Move snake (alternative)
+
+Game:
+  Space .................. Pause / Resume
+  Escape ................. Pause / Resume
+  Enter .................. Start game (from menu or game over)
+
+Mobile:
+  Swipe Left/Right ....... Change direction
+  Swipe Up/Down .......... Change direction
+  Tap Screen ............. Pause (while playing)
+
+Settings (Menu → Settings):
+  Time Control ........... Cycle / Day / Night / Custom
+  Clouds ................. Toggle on/off
+  Shadow ................. Dynamic (follows sun) or Fixed angle
+  Lamp Color ............. Yellow (warm) or White (cool LED)
+  Volume ................. 0-100% master volume
+
+Game Modes:
+  Classic ................ 20x20 grid, day/night cycle, no extras
+  Arcade ................. Random map size, maze walls, wrap edges,
+                          CPU snake rival, bug, lamps, fireflies,
+                          6 power-up types
+
+Power-Up Types (Arcade only):
+  Golden Apple ........... +3 score bonus
+  Immortal Apple ......... Ghost mode for 10 seconds
+  Growth Apple ........... +3 instant length
+  Speed Apple ............ 2x speed for 25 seconds
+  Slow Apple ............. 2x slower for 25 seconds
+  Black Apple ............ -5 length penalty
+
+============================================================
